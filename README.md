@@ -14,6 +14,7 @@
   <p align="center">
     <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
     <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit">
+    <a href="https://finance-guru-ai.streamlit.app/"><img src="https://img.shields.io/badge/🔴_LIVE_DEMO-Open_Web_App-10B981?style=for-the-badge" alt="Live Demo"></a>
     <img src="https://img.shields.io/badge/Groq-00C7B7?style=for-the-badge&logo=groq&logoColor=white" alt="Groq">
     <img src="https://img.shields.io/badge/Plotly-239120?style=for-the-badge&logo=plotly&logoColor=white" alt="Plotly">
   </p>
