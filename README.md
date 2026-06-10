@@ -8,8 +8,6 @@
 
 <a href="https://github.com/HyLuthfi"><img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=800&size=22&pause=1000&color=10B981&center=true&vCenter=true&width=800&lines=Intelligent+Financial+Assistant;Live+Crypto+Market+%26+Charts;Advanced+Financial+Calculators;Dynamic+Portfolio+Tracker" alt="Typing SVG" /></a>
 
-  <br />
-
   <p align="center">
     <a href="https://finance-guru-ai.streamlit.app/"><img src="https://img.shields.io/badge/LAUNCH_LIVE_APP-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Live Demo"></a>
   </p>
