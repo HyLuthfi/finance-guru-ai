@@ -42,7 +42,7 @@ def render_portfolio_tab():
     with kolom2:
         tambah_kuantitas = st.number_input("Qty", min_value=0.0, value=0.1, step=0.01, label_visibility="collapsed")
     with kolom3:
-        if st.button("Tambah", use_container_width=True, key="add_pf"):
+        if st.button("Tambah", width="stretch", key="add_pf"):
             if tambah_kuantitas > 0:
                 st.session_state.portfolio[tambah_koin] = st.session_state.portfolio.get(tambah_koin, 0) + tambah_kuantitas
                 st.rerun()
@@ -77,7 +77,7 @@ def render_portfolio_tab():
         kolom_hapus = st.columns(len(detail_portofolio)) if detail_portofolio else []
         for i, item in enumerate(detail_portofolio):
             with kolom_hapus[i]:
-                if st.button(f"Hapus {item['simbol']}", key=f"rm_{item['id']}", use_container_width=True):
+                if st.button(f"Hapus {item['simbol']}", key=f"rm_{item['id']}", width="stretch"):
                     del st.session_state.portfolio[item["id"]]
                     st.rerun()
     else:

@@ -65,7 +65,7 @@ def render_sidebar():
                 index=daftar_sesi.index(st.session_state.active_session),
                 label_visibility="collapsed")
         with kolom_sesi2:
-            if st.button("➕", use_container_width=True, help="Buat sesi baru"):
+            if st.button("➕", width="stretch", help="Buat sesi baru"):
                 nama_baru = f"Chat {len(daftar_sesi) + 1}"
                 st.session_state.sessions[nama_baru] = []
                 st.session_state.active_session = nama_baru
@@ -124,7 +124,7 @@ def render_sidebar():
 
         kolom_aksi1, kolom_aksi2 = st.columns(2)
         with kolom_aksi1:
-            if st.button("Hapus Chat", use_container_width=True):
+            if st.button("Hapus Chat", width="stretch"):
                 st.session_state.sessions[st.session_state.active_session] = []
                 st.session_state.messages = st.session_state.sessions[st.session_state.active_session]
                 st.rerun()
@@ -132,9 +132,9 @@ def render_sidebar():
             teks_ekspor = ekspor_obrolan()
             if teks_ekspor:
                 st.download_button("Export .txt", data=teks_ekspor, file_name="financeguru_chat.txt",
-                                 mime="text/plain", use_container_width=True)
+                                 mime="text/plain", width="stretch")
             else:
-                st.button("Export .txt", use_container_width=True, disabled=True)
+                st.button("Export .txt", width="stretch", disabled=True)
 
         st.markdown("""
         <div class="footer-text">

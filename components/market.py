@@ -77,7 +77,7 @@ def render_market_tab():
         kolom_analisis = st.columns(len(data_pasar))
         for i, koin in enumerate(data_pasar):
             with kolom_analisis[i]:
-                if st.button(f"Analisis {koin['symbol'].upper()}", key=f"ai_{koin['id']}", use_container_width=True):
+                if st.button(f"Analisis {koin['symbol'].upper()}", key=f"ai_{koin['id']}", width="stretch"):
                     prompt = f"Berikan analisis mendalam tentang {koin['name']} ({koin['symbol'].upper()}) saat ini. Harga: ${koin['current_price']:,.2f}, perubahan 24h: {koin.get('price_change_percentage_24h', 0) or 0:+.2f}%, market cap: ${koin.get('market_cap',0):,.0f}. Bagaimana outlook-nya?"
                     st.session_state.analyze_coin = prompt
                     st.rerun()
@@ -99,7 +99,7 @@ def render_market_tab():
             koin_terpilih = next((c for c in data_pasar if c["id"] == pilihan_koin), {})
             persentase_perubahan = koin_terpilih.get("price_change_percentage_24h", 0) or 0
             figur = buat_grafik_harga(waktu_grafik, harga_grafik, pilihan_koin, persentase_perubahan)
-            st.plotly_chart(figur, use_container_width=True, config={"displayModeBar": False})
+            st.plotly_chart(figur, width="stretch", config={"displayModeBar": False})
         else:
             st.caption("Chart tidak tersedia saat ini.")
 

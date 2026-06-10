@@ -18,7 +18,7 @@ def render_calculator_tab():
             durasi_tahun = st.number_input("Durasi (tahun)", min_value=1, value=10, step=1)
             tambahan_bulanan = st.number_input("Tambahan Bulanan (Rp)", min_value=0, value=1_000_000, step=100_000, format="%d")
 
-        if st.button("Hitung", use_container_width=True):
+        if st.button("Hitung", width="stretch"):
             bunga_bulanan = bunga_tahunan / 100 / 12
             total_bulan = durasi_tahun * 12
             total_akhir = modal_awal
@@ -42,7 +42,7 @@ def render_calculator_tab():
         with kolom2:
             estimasi_bunga = st.number_input("Estimasi Return Bulanan (%)", min_value=-50.0, value=1.5, step=0.5)
 
-        if st.button("Simulasi", use_container_width=True):
+        if st.button("Simulasi", width="stretch"):
             bunga_bulanan = estimasi_bunga / 100
             total_nilai = 0
             for _ in range(durasi_bulan):
@@ -67,7 +67,7 @@ def render_calculator_tab():
             harga_jual = st.number_input("Harga Jual", min_value=0.0, value=65000.0, step=1000.0)
             biaya_transaksi = st.number_input("Fee Transaksi (%)", min_value=0.0, value=0.15, step=0.05)
 
-        if st.button("Hitung", use_container_width=True, key="calc_pl"):
+        if st.button("Hitung", width="stretch", key="calc_pl"):
             total_beli = harga_beli * jumlah_unit
             total_jual = harga_jual * jumlah_unit
             total_biaya = (total_beli + total_jual) * (biaya_transaksi / 100)

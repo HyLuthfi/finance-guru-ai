@@ -94,17 +94,17 @@ def render_chat_tab(model, gaya_bahasa, suhu, maksimal_token):
         st.markdown("")
         kolom_saran1, kolom_saran2 = st.columns(2)
         with kolom_saran1:
-            if st.button("Analisis teknikal vs fundamental saham", use_container_width=True):
+            if st.button("Analisis teknikal vs fundamental saham", width="stretch"):
                 st.session_state.messages.append({"role": "user", "content": "Jelaskan perbedaan analisis teknikal dan fundamental dalam saham"})
                 st.rerun()
-            if st.button("Strategi diversifikasi portofolio 10 juta", use_container_width=True):
+            if st.button("Strategi diversifikasi portofolio 10 juta", width="stretch"):
                 st.session_state.messages.append({"role": "user", "content": "Buatkan strategi diversifikasi portofolio dengan budget 10 juta rupiah"})
                 st.rerun()
         with kolom_saran2:
-            if st.button("Cara mulai investasi crypto untuk pemula", use_container_width=True):
+            if st.button("Cara mulai investasi crypto untuk pemula", width="stretch"):
                 st.session_state.messages.append({"role": "user", "content": "Bagaimana cara mulai investasi crypto untuk pemula dengan modal kecil?"})
                 st.rerun()
-            if st.button("Risk management dalam trading", use_container_width=True):
+            if st.button("Risk management dalam trading", width="stretch"):
                 st.session_state.messages.append({"role": "user", "content": "Apa itu risk management dalam trading dan bagaimana menerapkannya?"})
                 st.rerun()
 
