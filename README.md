@@ -1,9 +1,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:10b981,100:059669&height=120&section=header" width="100%">
 
 <div align="center">
-  <br />
-  <br />
-
+  
 # 💹 FINANCE GURU AI
 
 <a href="https://github.com/HyLuthfi"><img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=800&size=22&pause=1000&color=10B981&center=true&vCenter=true&width=800&lines=Intelligent+Financial+Assistant;Live+Crypto+Market+%26+Charts;Advanced+Financial+Calculators;Dynamic+Portfolio+Tracker" alt="Typing SVG" /></a>
