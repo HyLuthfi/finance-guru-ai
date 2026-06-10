@@ -1,14 +1,10 @@
 [theme]
-base = "light"
-primaryColor = "#10b981"
-backgroundColor = "#f8fafb"
-secondaryBackgroundColor = "#ffffff"
-textColor = "#1e293b"
-font = "sans serif"
+base="light"
+primaryColor="#10B981"
+backgroundColor="#F4F7FB"
+secondaryBackgroundColor="#FFFFFF"
+textColor="#1E293B"
+font="sans serif"
 
-[server]
-headless = true
-port = 8501
-
-[browser]
-gatherUsageStats = false
+[client]
+toolbarMode="viewer"
