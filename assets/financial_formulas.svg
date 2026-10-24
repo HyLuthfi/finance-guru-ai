@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 580" width="100%" height="100%" style="background-color: #0d1117; border-radius: 14px; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <!-- Card Gradients -->
+    <linearGradient id="fin-panel-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14261f" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0b1713" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="fin-panel-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16232e" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="fin-panel-3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#24192b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#140c1b" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Accents -->
+    <linearGradient id="accent-emerald" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="accent-violet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#9333ea" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title & Header Bar -->
+  <rect x="25" y="22" width="1030" height="52" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.2" />
+  <circle cx="50" cy="48" r="6" fill="#34d399" />
+  <circle cx="68" cy="48" r="6" fill="#38bdf8" />
+  <circle cx="86" cy="48" r="6" fill="#c084fc" />
+  <text x="110" y="54" fill="#f0f6fc" font-size="16" font-weight="700" letter-spacing="0.5">MATHEMATICAL FOUNDATION: COMPOUND GROWTH, ANNUITY &amp; SHARPE RATIO</text>
+  <rect x="860" y="34" width="180" height="28" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1" />
+  <text x="950" y="52" fill="#34d399" font-size="11" font-weight="600" text-anchor="middle">QUANTITATIVE SUITE</text>
+
+  <!-- ========================================== -->
+  <!-- PANEL 1: COMPOUND INTEREST & DEPOSITS      -->
+  <!-- ========================================== -->
+  <g transform="translate(25, 90)">
+    <rect x="0" y="0" width="330" height="465" rx="12" fill="url(#fin-panel-1)" stroke="#059669" stroke-width="1.5" />
+    <path d="M 0 12 C 0 5.373 5.373 0 12 0 L 318 0 C 324.627 0 330 5.373 330 12 L 330 42 L 0 42 Z" fill="#042f1f" />
+    <circle cx="20" cy="21" r="5" fill="#34d399" />
+    <text x="35" y="26" font-size="14" font-weight="700" fill="#34d399">1. COMPOUND INTEREST (FV)</text>
+
+    <!-- Formula Sub-Card 1 -->
+    <g transform="translate(15, 55)">
+      <rect x="0" y="0" width="300" height="118" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+      <text x="12" y="22" font-size="11" font-weight="600" fill="#8b949e">NILAI MASA DEPAN DENGAN ANUITAS</text>
+      
+      <!-- FV = P(1 + r/n)^nt + PMT * [ ((1+r/n)^nt - 1) / (r/n) ] -->
+      <text x="12" y="52" font-size="12" font-weight="700" fill="#34d399" font-family="'Courier New', monospace">FV = P(1 + </text>
+      
+      <!-- Small fraction r/n -->
+      <line x1="94" y1="48" x2="114" y2="48" stroke="#34d399" stroke-width="1.2" />
+      <text x="104" y="42" font-size="10" font-weight="600" fill="#34d399" text-anchor="middle" font-family="'Courier New', monospace">r</text>
+      <text x="104" y="58" font-size="10" font-weight="600" fill="#34d399" text-anchor="middle" font-family="'Courier New', monospace">n</text>
+      
+      <text x="118" y="52" font-size="12" font-weight="700" fill="#34d399" font-family="'Courier New', monospace">)<tspan font-size="9" dy="-5">nt</tspan><tspan font-size="12" dy="5"> + PMT &#183; [</tspan></text>
+      
+      <!-- Stacked Fraction for PMT multiplier -->
+      <line x1="45" y1="84" x2="255" y2="84" stroke="#34d399" stroke-width="1.5" />
+      <!-- Numerator -->
+      <text x="150" y="76" font-size="11" font-weight="600" fill="#f0f6fc" text-anchor="middle" font-family="'Courier New', monospace">(1 + r/n)<tspan font-size="8" dy="-4">nt</tspan><tspan font-size="11" dy="4"> &#x2212; 1</tspan></text>
+      <!-- Denominator -->
+      <text x="150" y="100" font-size="11" font-weight="600" fill="#34d399" text-anchor="middle" font-family="'Courier New', monospace">r / n</text>
+      
+      <text x="260" y="88" font-size="12" font-weight="700" fill="#34d399" font-family="'Courier New', monospace">]</text>
+
+      <text x="12" y="112" font-size="9" fill="#6e7681">P = Modal Awal, PMT = Setoran Bulanan, r = Return</text>
+    </g>
+
+    <!-- Formula Sub-Card 2 -->
+    <g transform="translate(15, 185)">
+      <rect x="0" y="0" width="300" height="110" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+      <text x="12" y="22" font-size="11" font-weight="600" fill="#8b949e">EKSPLIKASI PARAMETER SIMULATOR</text>
+      
+      <text x="12" y="46" font-size="11" fill="#f0f6fc"><tspan font-weight="700" fill="#34d399">&#x2022; Modal Awal (P) :</tspan> Saldo pembuka investasi</text>
+      <text x="12" y="68" font-size="11" fill="#f0f6fc"><tspan font-weight="700" fill="#34d399">&#x2022; Setoran (PMT) :</tspan> Top-up rutin tiap bulan</text>
+      <text x="12" y="90" font-size="11" fill="#f0f6fc"><tspan font-weight="700" fill="#34d399">&#x2022; Durasi (t) :</tspan> Horizon waktu perencanaan</text>
+      <text x="12" y="104" font-size="9" fill="#6e7681">Komputasi iteratif via components/calculator.py</text>
+    </g>
+
+    <!-- Callout Box -->
+    <g transform="translate(15, 305)">
+      <rect x="0" y="0" width="300" height="145" rx="8" fill="#042116" stroke="#065f46" stroke-width="1" />
+      <text x="12" y="22" font-size="11" font-weight="700" fill="#34d399">KEKUATAN BUNGA MAJEMUK:</text>
+      <text x="12" y="44" font-size="11" fill="#d1fae5">&#x2022; <tspan font-weight="700" fill="#34d399">Eksponensial nt :</tspan> Pertumbuhan non-linier</text>
+      <text x="24" y="60" font-size="10" fill="#a7f3d0">Bunga menghasilkan bunga di tiap periode.</text>
+      <text x="12" y="82" font-size="11" fill="#d1fae5">&#x2022; <tspan font-weight="700" fill="#38bdf8">Akumulasi Anuitas :</tspan> Multiplier PMT berkala</text>
+      <text x="24" y="98" font-size="10" fill="#a7f3d0">Mendongkrak nilai total di atas modal murni.</text>
+      <text x="12" y="120" font-size="11" fill="#d1fae5">&#x2022; <tspan font-weight="700" fill="#fbbf24">Keuntungan Bersih :</tspan> Net Gain = FV - Modal</text>
+      <text x="24" y="136" font-size="10" fill="#a7f3d0">Evaluasi metrik ROI secara persentase real-time.</text>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- PANEL 2: LOAN AMORTIZATION & DCA ACCUM     -->
+  <!-- ========================================== -->
+  <g transform="translate(375, 90)">
+    <rect x="0" y="0" width="330" height="465" rx="12" fill="url(#fin-panel-2)" stroke="#0284c7" stroke-width="1.5" />
+    <path d="M 0 12 C 0 5.373 5.373 0 12 0 L 318 0 C 324.627 0 330 5.373 330 12 L 330 42 L 0 42 Z" fill="#082f49" />
+    <circle cx="20" cy="21" r="5" fill="#38bdf8" />
+    <text x="35" y="26" font-size="14" font-weight="700" fill="#38bdf8">2. ANUITAS &amp; SIMULASI DCA</text>
+
+    <!-- Formula Sub-Card 1: Monthly Amortization -->
+    <g transform="translate(15, 55)">
+      <rect x="0" y="0" width="300" height="118" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+      <text x="12" y="22" font-size="11" font-weight="600" fill="#8b949e">CICILAN ANUITAS PINJAMAN (MORTGAGE)</text>
+      
+      <!-- M = P * [ (r(1+r)^n) / ((1+r)^n - 1) ] -->
+      <text x="12" y="66" font-size="14" font-weight="700" fill="#38bdf8" font-family="'Courier New', monospace">M = P &#183; [</text>
+      
+      <!-- Fraction bar -->
+      <line x1="88" y1="60" x2="265" y2="60" stroke="#38bdf8" stroke-width="1.8" />
+      <!-- Numerator -->
+      <text x="176" y="50" font-size="12" font-weight="600" fill="#f0f6fc" text-anchor="middle" font-family="'Courier New', monospace">r &#183; (1 + r)<tspan font-size="9" dy="-4">n</tspan></text>
+      <!-- Denominator -->
+      <text x="176" y="80" font-size="12" font-weight="600" fill="#38bdf8" text-anchor="middle" font-family="'Courier New', monospace">(1 + r)<tspan font-size="9" dy="-4">n</tspan><tspan font-size="12" dy="4"> &#x2212; 1</tspan></text>
+      
+      <text x="270" y="66" font-size="14" font-weight="700" fill="#38bdf8" font-family="'Courier New', monospace">]</text>
+
+      <text x="12" y="106" font-size="10" fill="#6e7681">P = Pokok Pinjaman, r = Bunga/Bulan, n = Tenor Bulan</text>
+    </g>
+
+    <!-- Formula Sub-Card 2: DCA Formulation -->
+    <g transform="translate(15, 185)">
+      <rect x="0" y="0" width="300" height="110" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+      <text x="12" y="22" font-size="11" font-weight="600" fill="#8b949e">DOLLAR COST AVERAGING (DCA) ACCUMULATION</text>
+      
+      <!-- V_t = sum_{k=1}^t D_k * prod_{j=k}^t (1 + r_j) -->
+      <text x="12" y="58" font-size="13" font-weight="700" fill="#38bdf8" font-family="'Courier New', monospace">V<tspan font-size="9" dy="2">t</tspan><tspan font-size="13" dy="-2"> = &#x2211; D</tspan><tspan font-size="9" dy="2">k</tspan><tspan font-size="13" dy="-2"> &#183; &#x220F; (1 + r</tspan><tspan font-size="9" dy="2">j</tspan><tspan font-size="13" dy="-2">)</tspan></text>
+      
+      <text x="12" y="84" font-size="11" fill="#f0f6fc">Net P/L = Total Nilai &#x2212; (D &#183; Durasi)</text>
+      <text x="12" y="102" font-size="9" fill="#6e7681">Mitigasi volatilitas harga pasar melalui cicilan periodik</text>
+    </g>
+
+    <!-- Callout Box -->
+    <g transform="translate(15, 305)">
+      <rect x="0" y="0" width="300" height="145" rx="8" fill="#082538" stroke="#0369a1" stroke-width="1" />
+      <text x="12" y="22" font-size="11" font-weight="700" fill="#38bdf8">KEUNGGULAN STRATEGI DCA:</text>
+      <text x="12" y="44" font-size="11" fill="#bae6fd">&#x2022; <tspan font-weight="700" fill="#38bdf8">Rata-Rata Harga Masuk :</tspan> Anti-FOMO</text>
+      <text x="24" y="60" font-size="10" fill="#7dd3fc">Membeli lebih banyak unit saat pasar diskon/bearish.</text>
+      <text x="12" y="82" font-size="11" fill="#bae6fd">&#x2022; <tspan font-weight="700" fill="#34d399">Disiplin Investasi :</tspan> Eliminasi bias emosional</text>
+      <text x="24" y="98" font-size="10" fill="#7dd3fc">Menghilangkan stres timing puncak dan dasar pasar.</text>
+      <text x="12" y="120" font-size="11" fill="#bae6fd">&#x2022; <tspan font-weight="700" fill="#fbbf24">Amortisasi Pokok :</tspan> Komposisi bunga menurun</text>
+      <text x="24" y="136" font-size="10" fill="#7dd3fc">Porsi pelunasan pokok bertambah besar tiap tenor.</text>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- PANEL 3: PORTFOLIO RETURN & SHARPE RATIO   -->
+  <!-- ========================================== -->
+  <g transform="translate(725, 90)">
+    <rect x="0" y="0" width="330" height="465" rx="12" fill="url(#fin-panel-3)" stroke="#7c3aed" stroke-width="1.5" />
+    <path d="M 0 12 C 0 5.373 5.373 0 12 0 L 318 0 C 324.627 0 330 5.373 330 12 L 330 42 L 0 42 Z" fill="#24133b" />
+    <circle cx="20" cy="21" r="5" fill="#c084fc" />
+    <text x="35" y="26" font-size="14" font-weight="700" fill="#c084fc">3. PORTOFOLIO &amp; SHARPE RATIO</text>
+
+    <!-- Formula Sub-Card 1: Sharpe Ratio -->
+    <g transform="translate(15, 55)">
+      <rect x="0" y="0" width="300" height="118" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+      <text x="12" y="22" font-size="11" font-weight="600" fill="#8b949e">RISK-ADJUSTED RETURN (SHARPE RATIO)</text>
+      
+      <!-- Sharpe = (R_p - R_f) / sigma_p -->
+      <text x="12" y="66" font-size="14" font-weight="700" fill="#c084fc" font-family="'Courier New', monospace">Sharpe =</text>
+      
+      <!-- Fraction bar -->
+      <line x1="90" y1="60" x2="260" y2="60" stroke="#c084fc" stroke-width="1.8" />
+      <!-- Numerator -->
+      <text x="175" y="50" font-size="13" font-weight="600" fill="#f0f6fc" text-anchor="middle" font-family="'Courier New', monospace">R<tspan font-size="9" dy="2">p</tspan><tspan font-size="13" dy="-2"> &#x2212; R</tspan><tspan font-size="9" dy="2">f</tspan></text>
+      <!-- Denominator -->
+      <text x="175" y="80" font-size="13" font-weight="600" fill="#c084fc" text-anchor="middle" font-family="'Courier New', monospace">&#963;<tspan font-size="9" dy="2">p</tspan></text>
+
+      <text x="12" y="106" font-size="10" fill="#6e7681">R_p = Return Portofolio, R_f = Risk-Free, &#963;_p = Volatilitas</text>
+    </g>
+
+    <!-- Formula Sub-Card 2: Weighted Return -->
+    <g transform="translate(15, 185)">
+      <rect x="0" y="0" width="300" height="110" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+      <text x="12" y="22" font-size="11" font-weight="600" fill="#8b949e">IMBAL HASIL TERBOBOT (WEIGHTED RETURN)</text>
+      
+      <!-- R_p = sum w_i * R_i -->
+      <text x="12" y="56" font-size="14" font-weight="700" fill="#c084fc" font-family="'Courier New', monospace">R<tspan font-size="10" dy="2">p</tspan><tspan font-size="14" dy="-2"> = &#x2211; (w</tspan><tspan font-size="9" dy="2">i</tspan><tspan font-size="14" dy="-2"> &#183; R</tspan><tspan font-size="9" dy="2">i</tspan><tspan font-size="14" dy="-2">)</tspan></text>
+      
+      <text x="12" y="82" font-size="11" fill="#f0f6fc">&#x2211; w<tspan font-size="9" dy="2">i</tspan><tspan font-size="11" dy="-2"> = 1.0 (Normalisasi Bobot Aset Kripto)</tspan></text>
+      <text x="12" y="102" font-size="9" fill="#6e7681">Valuasi = &#x2211; (Kuantitas_i &#215; Harga_Pasar_i)</text>
+    </g>
+
+    <!-- Callout Box -->
+    <g transform="translate(15, 305)">
+      <rect x="0" y="0" width="300" height="145" rx="8" fill="#1e1035" stroke="#581c87" stroke-width="1" />
+      <text x="12" y="22" font-size="11" font-weight="700" fill="#c084fc">INTERPRETASI KINERJA PORTOFOLIO:</text>
+      
+      <text x="12" y="44" font-size="11" fill="#e9d5ff">&#x2022; <tspan font-weight="700" fill="#34d399">Sharpe &gt; 1.0 :</tspan> Kinerja Risk-Adjusted Baik</text>
+      <text x="24" y="60" font-size="10" fill="#d8b4fe">Imbal hasil mengkompensasi risiko volatilitas.</text>
+      <text x="12" y="82" font-size="11" fill="#e9d5ff">&#x2022; <tspan font-weight="700" fill="#38bdf8">Sharpe &gt; 2.0 :</tspan> Sangat Unggul (Very Good)</text>
+      <text x="24" y="98" font-size="10" fill="#d8b4fe">Efisien terhadap fluktuasi pasar ekstrem.</text>
+      <text x="12" y="120" font-size="11" fill="#e9d5ff">&#x2022; <tspan font-weight="700" fill="#f43f5e">Sharpe &lt; 0.0 :</tspan> Risk-Free Lebih Menguntungkan</text>
+      <text x="24" y="136" font-size="10" fill="#d8b4fe">Portofolio membutuhkan rebalancing aset segera.</text>
+    </g>
+  </g>
+</svg>

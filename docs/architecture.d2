@@ -1,0 +1,242 @@
+direction: right
+
+title: {
+  label: "FinanceGuru AI — FinTech AI Assistant & Market Simulation Architecture"
+  near: top-center
+  shape: text
+  style: {
+    font-size: 24
+    bold: true
+    font-color: "#f8fafc"
+  }
+}
+
+presentation_layer: "1. Presentation & Interaction Layer" {
+  direction: down
+  style: {
+    stroke: "#38bdf8"
+    fill: "#0f172a"
+    stroke-width: 2
+    font-color: "#f8fafc"
+  }
+
+  streamlit_app: "Streamlit Modern Web Surface\n(app.py - Glassmorphism UI)\n4-Tab Navigation" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#38bdf8"
+    }
+  }
+
+  tab_chat: "Tab 1: AI Financial Chat\nMulti-Persona Dialogue\nPortfolio-Aware Context" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#38bdf8"
+    }
+  }
+
+  tab_market: "Tab 2: Live Market & Charts\nTop 5 Crypto Assets\nFear & Greed Index Telemetry" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#38bdf8"
+    }
+  }
+
+  tab_calculator: "Tab 3: Quantitative Calculators\nCompound Interest, DCA Simulator\nTrading Profit & Loss Engine" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#38bdf8"
+    }
+  }
+
+  tab_portfolio: "Tab 4: Portfolio Tracker\nDynamic Coin Holdings\nReal-Time Valuation & Weights" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#38bdf8"
+    }
+  }
+
+  streamlit_app -> tab_chat: "Route Tab"
+  streamlit_app -> tab_market: "Route Tab"
+  streamlit_app -> tab_calculator: "Route Tab"
+  streamlit_app -> tab_portfolio: "Route Tab"
+}
+
+ai_reasoning_core: "2. AI Reasoning & Inference Engine" {
+  direction: down
+  style: {
+    stroke: "#10b981"
+    fill: "#0f172a"
+    stroke-width: 2
+    font-color: "#f8fafc"
+  }
+
+  groq_client: "Groq Cloud Ultra-Fast Client\n(components/chat.py)\nSub-Second Streaming Inference" {
+    shape: hexagon
+    style: {
+      fill: "#1e293b"
+      stroke: "#10b981"
+    }
+  }
+
+  model_router: "Dynamic LLM Model Router\n• LLaMA 3.3 70B Versatile\n• LLaMA 3.1 8B Instant\n• Mixtral 8x7B 32k & Gemma 2 9B" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#34d399"
+    }
+  }
+
+  prompt_guardrails: "Regulatory & Persona Guardrails\n• Professional / Casual / Trader\n• Risk Disclaimer Enforcement\n• Non-Financial Advice Policy" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#10b981"
+    }
+  }
+
+  groq_client -> model_router: "Model Payload"
+  model_router -> prompt_guardrails: "Structured Output"
+}
+
+market_telemetry_layer: "3. Market Data & Telemetry Ingestion" {
+  direction: down
+  style: {
+    stroke: "#fbbf24"
+    fill: "#0f172a"
+    stroke-width: 2
+    font-color: "#f8fafc"
+  }
+
+  coingecko_api: "CoinGecko Free REST Engine\n(utils/api_handler.py)\nMarket Cap, Prices & History" {
+    shape: cylinder
+    style: {
+      fill: "#1e293b"
+      stroke: "#fbbf24"
+    }
+  }
+
+  cache_manager: "Streamlit In-Memory Cache\n@st.cache_data(ttl=120s: Prices)\n@st.cache_data(ttl=300s: Charts)" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#f59e0b"
+    }
+  }
+
+  sentiment_engine: "Alternative.me Telemetry\nCrypto Fear & Greed Index\nDaily Sentiment Meter (0-100)" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#fbbf24"
+    }
+  }
+
+  plotly_renderer: "Plotly Interactive Visualizer\nArea Charts & Sparklines\nReal-Time Interactive Crosshairs" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#fbbf24"
+    }
+  }
+
+  coingecko_api -> cache_manager: "Cached Stream"
+  cache_manager -> plotly_renderer: "Render Vector"
+  sentiment_engine -> plotly_renderer: "Sentiment Gauge"
+}
+
+quant_engine: "4. Quantitative Calculation Engine" {
+  direction: down
+  style: {
+    stroke: "#a78bfa"
+    fill: "#0f172a"
+    stroke-width: 2
+    font-color: "#f8fafc"
+  }
+
+  compound_calc: "Compound Interest Engine\nFV = P(1+r/n)^nt + PMT[...]\nMonthly Periodic Annuity" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#a78bfa"
+    }
+  }
+
+  dca_simulator: "Dollar Cost Averaging Simulator\nIterative Periodic Accumulation\nProfit/Loss & Total Capital" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#a78bfa"
+    }
+  }
+
+  pnl_calculator: "Trading PnL Calculator\nNet PnL = Sold - Bought - Fees\nPercentage Return & Net Yield" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#c084fc"
+    }
+  }
+
+  portfolio_eval: "Portfolio Valuation Matrix\nHoldings × Live Current Price\nAsset Weighting & Aggregation" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#a78bfa"
+    }
+  }
+}
+
+session_layer: "5. In-Memory Session & Zero-Storage" {
+  direction: down
+  style: {
+    stroke: "#f43f5e"
+    fill: "#0f172a"
+    stroke-width: 2
+    font-color: "#f8fafc"
+  }
+
+  session_state: "st.session_state Ephemeral Store\nMulti-Session Chat History\nDynamic Portfolio Dict" {
+    shape: cylinder
+    style: {
+      fill: "#1e293b"
+      stroke: "#f43f5e"
+    }
+  }
+
+  zero_persistence: "Zero-Persistence Security\nNo User Data Saved to Disk\nEphemeral RAM-Only Lifespan" {
+    shape: oval
+    style: {
+      fill: "#7f1d1d"
+      stroke: "#f43f5e"
+    }
+  }
+
+  export_engine: "Client-Side Export Facility\nPlaintext Chat (.txt) & Portfolio\nDownload Triggered In-Browser" {
+    shape: rectangle
+    style: {
+      fill: "#1e293b"
+      stroke: "#f43f5e"
+    }
+  }
+
+  session_state -> zero_persistence: "Enforce Policy"
+  session_state -> export_engine: "On-Demand Download"
+}
+
+# Pipeline Inter-Layer Connections
+presentation_layer.tab_chat -> ai_reasoning_core.groq_client: "User Query + Context"
+presentation_layer.tab_market -> market_telemetry_layer.coingecko_api: "Fetch Market Data"
+presentation_layer.tab_calculator -> quant_engine.compound_calc: "Input Parameters"
+presentation_layer.tab_portfolio -> quant_engine.portfolio_eval: "Holdings Quantity"
+
+market_telemetry_layer.cache_manager -> quant_engine.portfolio_eval: "Live Asset Prices"
+quant_engine.portfolio_eval -> ai_reasoning_core.groq_client: "Portfolio Context Injection"
+
+ai_reasoning_core.prompt_guardrails -> session_layer.session_state: "Append Message"
+presentation_layer.tab_chat -> session_layer.session_state: "Store Active Dialogue"
+quant_engine.portfolio_eval -> presentation_layer.tab_portfolio: "Total Valuation Display"
