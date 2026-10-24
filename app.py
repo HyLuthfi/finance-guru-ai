@@ -1,5 +1,11 @@
+import os
 import streamlit as st
 from datetime import datetime
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 from components.chat import render_chat_tab, PROMPT_SISTEM
 from components.market import render_market_tab
 from components.calculator import render_calculator_tab
@@ -21,7 +27,13 @@ def muat_sesi():
     if "active_session" not in st.session_state:
         st.session_state.active_session = "Default"
     if "groq_api_key" not in st.session_state:
-        st.session_state.groq_api_key = ""
+        env_key = os.getenv("GROQ_API_KEY", "")
+        if not env_key:
+            try:
+                env_key = st.secrets.get("GROQ_API_KEY", "")
+            except Exception:
+                env_key = ""
+        st.session_state.groq_api_key = env_key
     if "portfolio" not in st.session_state:
         st.session_state.portfolio = {}
     if "analyze_coin" not in st.session_state:

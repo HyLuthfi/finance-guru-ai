@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import time
 from datetime import datetime
@@ -51,6 +52,13 @@ PENTING: SELALU kasih disclaimer bahwa ini bukan ajakan beli/jual."""
 
 def dapatkan_klien_groq():
     api_key = st.session_state.get("groq_api_key", "")
+    if not api_key:
+        api_key = os.getenv("GROQ_API_KEY", "")
+    if not api_key:
+        try:
+            api_key = st.secrets.get("GROQ_API_KEY", "")
+        except Exception:
+            pass
     if not api_key:
         return None
     return Groq(api_key=api_key)
@@ -118,13 +126,9 @@ def render_chat_tab(model, gaya_bahasa, suhu, maksimal_token):
         perintah = None
 
     if perintah:
-        if not st.session_state.groq_api_key:
-            st.error("⚠️ Masukkan Groq API Key di sidebar terlebih dahulu!")
-            st.stop()
-
         klien = dapatkan_klien_groq()
         if not klien:
-            st.error("❌ Gagal menginisialisasi klien Groq.")
+            st.error("⚠️ Masukkan Groq API Key di sidebar atau konfigurasikan variabel GROQ_API_KEY terlebih dahulu!")
             st.stop()
 
         st.session_state.messages.append({"role": "user", "content": perintah})
